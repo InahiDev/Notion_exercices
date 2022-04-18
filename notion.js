@@ -38,6 +38,9 @@ const nounourses = [{
 
 function afficherNomDesNounours(array) {}
 // utiliser une BOUCLE (for) !
+for (let name of nounourses) {
+  console.log(nounourses.name)
+}
 
 function afficherPrixTotal(array) {}
 
