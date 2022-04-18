@@ -4,8 +4,11 @@ const liste = [
 	{ name: 'bouh', price: 50 }
 ]
 
-function affichePrenomsDeLaListe(liste) {
-  for (let elem of liste) {
+function affichePrenomsDeLaListe(list) {
+  for (let elem of list) {
     console.log('Le nounours ' + elem.name + ' est à ' + elem.price + '€')
+    console.log(`Le nounours ${elem.name} est à ${elem.price}€`)
   }
 }
+
+affichePrenomsDeLaListe(liste);
