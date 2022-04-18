@@ -118,7 +118,6 @@ function afficherSommeDescriptions(array) {
 afficherSommeDescriptions(nounourses);
 
 function afficherTroisiemeCouleurDispo(array) {
-  
   for (let nounours of nounourses) {
     if (nounours.colors.length >= 3) {
       let troisiemeCouleur = nounours.colors[2];
@@ -140,8 +139,6 @@ function addTenToAge(age) {
 // Ex:
 let ageJulie = 12;
 let agePaul = 24;
-addTenToAge(ageJulie);
-addTenToAge(agePaul);
 console.log(addTenToAge(ageJulie)) // should display 22
 console.log(addTenToAge(agePaul)) // should display 34
 // Help: use the note "What's an argument ?" to really get how arguments work
