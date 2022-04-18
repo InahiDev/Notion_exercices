@@ -112,8 +112,8 @@ function afficherSommeDescriptions(array) {
   let sommeDescriptions = '';
   for (let nounours of nounourses) {
     sommeDescriptions += nounours.description;
-    console.log(sommeDescriptions);
   }
+  console.log(sommeDescriptions);
 }
 afficherSommeDescriptions(nounourses);
 
