@@ -61,7 +61,7 @@ function afficherMoitiePrix(array) {
   for (let nounours of nounourses) {
     nounours.price /= 2;
     nounours.price /= 100;
-    console.log(nounours.name + ' à -50% est à ' + nounours.price + ' €');
+    console.log(`${nounours.name} à -50% est à ${nounours.price}€`);
     //reset des prix des nounours dans le array aprés la réduction de 50%;
     nounours.price *= 200;
   }
@@ -76,7 +76,7 @@ function afficherReductionVingt(array) {
     nounours.price *= .8;
     //affichage en € et plus en cents
     nounours.price /= 100;
-    console.log(nounours.name + ' à -20% est à ' + nounours.price + ' €');
+    console.log(`${nounours.name} à -20% est à ${nounours.price}€.`);
     //reset des prix des nounours après la réduction de 20% dans le array nounourses
     nounours.price *= 125;
   }
@@ -86,7 +86,11 @@ afficherReductionVingt(nounourses);
 function afficherColorisDisponibles(array) {
   //Pour chaque nounours du tableau nounourses, je récupère la longueur du array colors de chaque instance
   for (let nounours of nounourses) {
-    console.log(nounours.name + ' est disponible en ' + nounours.colors.length + ' couleurs')
+    if (nounours.colors.length > 1){
+      console.log(`${nounours.name} est disponible en ${nounours.colors.length} coloris.`)
+    } else {
+      console.log(`Il n'y a qu'un seul coloris disponible pour ${nounours.name}`)
+    }
   }
 }
 afficherColorisDisponibles(nounourses);
@@ -97,9 +101,9 @@ function afficherSuperieurTrente(array) {
     //mise du prix du nounours en €
     nounours.price /= 100;
     if (nounours.price > 30) {
-      console.log(nounours.name + ' coûte + de 30€ (il coûte ' + nounours.price + '€)')
+      console.log(`${nounours.name} coûte + de 30€ (il coûte ${nounours.price}€)`)
     } else {
-      console.log(nounours.name + ' coûte - de 30€, il est abordable (il coûte ' + nounours.price + '€)')
+      console.log(`${nounours.name} coûte - de 30€, (il ne coûte que ${nounours.price}€)`)
     }
     //remise du prix des nounours en cents
     nounours.price *= 100;
@@ -121,10 +125,10 @@ function afficherTroisiemeCouleurDispo(array) {
   for (let nounours of nounourses) {
     if (nounours.colors.length >= 3) {
       let troisiemeCouleur = nounours.colors[2];
-      console.log('Le 3ème coloris de ' + nounours.name + ' est ' + troisiemeCouleur)
+      console.log(`Le 3ème colorise de ${nounours.name} disponible est ${troisiemeCouleur}.`)
     } else {
       // Attention: gérer les cas où aucune troisième couleur n'existe
-      console.log("Il n'y a que 2 coloris disponibles pour " + nounours.name)
+      console.log(`Il y a moins de 3 coloris disponibles pour ${nounours.name}`)
     }
   }
 }
